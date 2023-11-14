@@ -1,0 +1,12 @@
+For Auditorium
+first floor: yes
+direction:
+?is your location is in north direction.
+yes:
+?is this a lecture hall. 
+yes:
+auditorium is your location. hehehehe
+
+
+
+
