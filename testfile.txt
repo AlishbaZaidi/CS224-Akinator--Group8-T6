@@ -1,0 +1,10 @@
+?is there a parking on this floor.
+lower ground
+?this floor is newly made.
+fourth floor
+?does this floor have two divisions.
+second floor
+?does this floor have reception.
+ground floor
+?does piano room is on the same floor.
+first floor
