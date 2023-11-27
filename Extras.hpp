@@ -2,6 +2,11 @@
 #include<iostream>
 
 
+int NewRandomNumGenerator (int range)
+{
+    int num = (std::rand() % range)+1;
+    return num;
+}
 
 bool newisInArray(int value, const int* arr, int size)
     {
@@ -14,9 +19,3 @@ bool newisInArray(int value, const int* arr, int size)
         }
         return false;
     }
-
-int NewRandomNumGenerator (int range)
-{
-    int num = (std::rand() % range)+1;
-    return num;
-}
