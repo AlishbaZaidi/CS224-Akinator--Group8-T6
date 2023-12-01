@@ -3,7 +3,7 @@
 #include"Locations.hpp"
 #include"FirstFloor.hpp"
 #include"LowerGroundFloor.hpp"
-// #include"SecondFloor.hpp"
+#include"SecondFloor.hpp"
 // #include"GroundFLoor.hpp"
 
 
@@ -23,6 +23,10 @@ int main()
         LowerGroundFloor LGF;
         LGF.questionOrder();
     }
+    else if(loc.floor == "Second Floor"){
+        SecondFloor SF;
+        SF.questionOrder();
+    }
     // else if(loc.floor == "Ground Floor")
     // {
 
@@ -30,6 +34,6 @@ int main()
     // else if(loc.floor == "Fourth Floor")
     // {
 
-    // }else if(loc.floor == "Second Floor")
+    
     return 0;
 }
