@@ -46,7 +46,7 @@ bool LowerGroundFloor::maleRestricted()
 
 bool LowerGroundFloor::cockroach()
 {
-        std::cout << "Are cockroaches and lizards found at your desired loctaion?" << "\n";
+        std::cout << "Are cockroaches and lizards found at your desired location?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -102,7 +102,7 @@ bool LowerGroundFloor::openArea()
 
 bool LowerGroundFloor::events()
 {
-        std::cout << "Do events happend at your desired location?" << "\n";
+        std::cout << "Do events take place at your desired location?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {

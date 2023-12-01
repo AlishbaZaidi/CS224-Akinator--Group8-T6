@@ -2,6 +2,7 @@
 #include<string>
 #include <iostream>
 #include"Extras.hpp"
+#include "game.hpp"
 #include <ctime>
 
 class Locations
@@ -18,10 +19,10 @@ public:
 
     // Locations() = default;
 
-    bool Ground();
-    bool LowerGround();
-    bool First();
-    bool Second();
+    bool Ground(Game& game);
+    bool LowerGround(Game& game);
+    bool First(Game& game);
+    bool Second(Game& game);
     void ourFloor();
     void updateFloor();
 };

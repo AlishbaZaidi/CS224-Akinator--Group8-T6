@@ -7,10 +7,31 @@
 
 // Locations::Locations(){}
 
-bool Locations::Ground() 
+bool Locations::Ground(Game& game) 
     {
-        std::cout << "Is there reception on this floor?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is there reception on this floor?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QGround.png");
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            if (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        option = "yes";
+                        break;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        option = "no";
+                        break;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             reception = true;
@@ -21,24 +42,66 @@ bool Locations::Ground()
             return false;
         }
     }
-bool Locations::LowerGround()
+bool Locations::LowerGround(Game& game)
     {
-        std::cout << "Is there parking on this floor?" << "\n";
-        std::cin >> option;
-        if (option == "yes")
-        {
-            park = true;
-            return true;
+        // std::cout << "Is there parking on this floor?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QLowerGround.png");
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            if (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        option = "yes";
+                        break;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        option = "no";
+                        break;
+                    }
+                }
+            }
         }
-        else
-        {
-            return false;
+            if(option == "yes"){
+                park = true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-    }
-bool Locations::First()
-    {
-        std::cout << "Is the piano room on the same floor?" << "\n";
-        std::cin >> option;
+    bool Locations::First(Game &game) {
+            // std::cout << "Is the piano room on the same floor?" << "\n";
+            // std::cin >> option;
+        game.loadImage("QFirst.png");
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            if (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        option = "yes";
+                        break;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        option = "no";
+                        break;
+                    }
+                }
+            }
+        }
+
+
         if (option == "yes")
         {
             piano = true;
@@ -49,10 +112,31 @@ bool Locations::First()
             return false;
         }
     }
-bool Locations::Second() 
+bool Locations::Second(Game& game) 
     {
-        std::cout << "Does this floor have two divisions?" << "\n";
-        std::cin >> option;
+        // std::cout << "Does this floor have two divisions?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QSecond.png");
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            if (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        option = "yes";
+                        break;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        option = "no";
+                        break;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             divide = true;
@@ -66,6 +150,7 @@ bool Locations::Second()
 
 void Locations::ourFloor()
     {
+        Game game;
         bool returntype = false;
         int arr[4] = {0, 0, 0, 0};
         while (!returntype)
@@ -83,26 +168,27 @@ void Locations::ourFloor()
                     break; 
                 }
             }
-            if (number = 1)
+            if (number == 1)
             {
-                returntype = this->Ground();
+                returntype = this->Ground(game);
             }
-            else if (number = 2)
+            else if (number == 2)
             {
-                returntype = this->LowerGround();
+                returntype = this->LowerGround(game);
             }
-            else if (number = 3)
+            else if (number == 3)
             {
-                returntype = this->First();
+                returntype = this->First(game);
             }
-            else if (number = 4)
+            else if (number == 4)
             {
-                returntype = this->Second();
+                returntype = this->Second(game);
             }
             else
             {
-                newmade = true;
-                returntype = newmade;
+                // newmade = true;
+                // returntype = newmade;
+                std::cout<<"Wohooo! Your location is Horizon";
             }
         }
     }

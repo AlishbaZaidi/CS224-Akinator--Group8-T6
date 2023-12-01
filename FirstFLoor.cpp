@@ -6,10 +6,30 @@
 // FirstFloor::FirstFloor(){}
 
 
-bool FirstFloor::eastDirection() 
+bool FirstFloor::eastDirection(Game& game) 
     {
-        std::cout << "Is the location you are thinking in East?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is the location you are thinking in East?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QEast.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
+
         if (option == "yes")
         {
             return true;
@@ -20,10 +40,29 @@ bool FirstFloor::eastDirection()
         }
     }
 
-bool FirstFloor::northDirection() 
+bool FirstFloor::northDirection(Game& game) 
     {
-        std::cout << "Is the location you are thinking in North?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is the location you are thinking in North?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QNorth.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -34,10 +73,29 @@ bool FirstFloor::northDirection()
         }
     }
 
-bool FirstFloor::smokingArea()
+bool FirstFloor::smokingArea(Game& game)
     {
-        std::cout << "Are you thinking of a smoking area?" << "\n";
-        std::cin >> option;
+        // std::cout << "Are you thinking of a smoking area?" << "\n";
+        // std::cin >> option;
+        game.loadImage("Qsmokingarea.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -49,10 +107,29 @@ bool FirstFloor::smokingArea()
 
     }
     
-bool FirstFloor::capacity()
+bool FirstFloor::capacity(Game& game)
     {
-        std::cout << "Is the capacity of the room you are thinking 350+?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is the capacity of the room you are thinking 350+?" << "\n";
+        // std::cin >> option;
+        game.loadImage("Qcapacity.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -63,10 +140,29 @@ bool FirstFloor::capacity()
         }
     }
     
-bool FirstFloor::lectureHall()
+bool FirstFloor::lectureHall(Game& game)
     {
-        std::cout << "Are you thinking of a Lecture Hall?" << "\n";
-        std::cin >> option;
+        // std::cout << "Are you thinking of a Lecture Hall?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QLectureHall.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -77,10 +173,29 @@ bool FirstFloor::lectureHall()
         }
     }
 
-bool FirstFloor::multiStory()
+bool FirstFloor::multiStory(Game& game)
     {
-        std::cout << "Is your location found on multiple floors?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is your location found on multiple floors?" << "\n";
+        // std::cin >> option;
+        game.loadImage("Qmultiple.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -91,10 +206,29 @@ bool FirstFloor::multiStory()
         }
     }
 
-bool FirstFloor::onlyFaculty()
+bool FirstFloor::onlyFaculty(Game& game)
     {
-        std::cout << "Is this location reserved for faculty?" << "\n";
-        std::cin >> option;
+        // std::cout << "Is this location reserved for faculty?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QonlyFaculty.png");  // Load the question image
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            while (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        return true;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        return false;
+                    }
+                }
+            }
+        }
         if (option == "yes")
         {
             return true;
@@ -107,22 +241,25 @@ bool FirstFloor::onlyFaculty()
 
 void FirstFloor::questionOrder()
     {
+        Game game;
         int num1 = NewRandomNumGenerator(2);
         if (num1 == 1)
         {
-            bool east = eastDirection();
+            bool east = eastDirection(game);
             if (east)
             {
-                bool lec = lectureHall();
+                bool lec = lectureHall(game);
                 if (lec)
                 {
-                    bool cap = capacity();
+                    bool cap = capacity(game);
                     if (cap)
                     {
+                        game.displayOutcome("Audi.png");
                         std::cout<<"WOHOOOO! Your location is Auditorium";
                     }
                     else
                     {
+                        game.displayOutcome("TR.png");
                         std::cout<<"WOHOOOO! Your location is Tariq Rafi";
                     }
                 }
@@ -131,17 +268,29 @@ void FirstFloor::questionOrder()
                     int num2 = NewRandomNumGenerator(2);
                     if (num2 == 1)
                     {
-                        bool nasha = smokingArea();
+                        bool nasha = smokingArea(game);
                         if (nasha)
-                        {std::cout<<"WOHOOOO! Your location is Mehfil";}
-                        else {std::cout<<"WOHOOOO! Your location is Library";}
+                        {
+                        game.displayOutcome("Mehfil.png");
+                        std::cout<<"WOHOOOO! Your location is Mehfil";
+                        }
+                        else {
+                            game.displayOutcome("Lib.png");
+                            std::cout<<"WOHOOOO! Your location is Library";
+                            }
                     }
                     else
                     {
-                        bool parhaku = multiStory();
+                        bool parhaku = multiStory(game);
                         if (parhaku)
-                        {std::cout<<"WOHOOOO! Your location is Library";}
-                        else{std::cout<<"WOHOOOO! Your location is Mehfil";}
+                        {
+                        game.displayOutcome("Lib.png");
+                        std::cout<<"WOHOOOO! Your location is Library";
+                        }
+                        else{
+                            game.displayOutcome("Mehfil.png");
+                            std::cout<<"WOHOOOO! Your location is Mehfil";
+                            }
                     }
                 }
             }
@@ -150,41 +299,61 @@ void FirstFloor::questionOrder()
                 int num3 = NewRandomNumGenerator(2);
                     if (num3 == 1)
                     {
-                        bool nasha = smokingArea();
+                        bool nasha = smokingArea(game);
                         if (nasha)
-                        {std::cout<<"WOHOOOO! Your location is Baithak";}
-                        else {std::cout<<"WOHOOOO! Your location is Dean's Pod";}
+                        {
+                            game.displayOutcome("Baithak.png");
+                            std::cout<<"WOHOOOO! Your location is Baithak";
+                            }
+                        else {
+                        game.displayOutcome("DP.png");
+                        std::cout<<"WOHOOOO! Your location is Dean's Pod";
+                        }
                     }
                     else
                     {
-                        bool dir = northDirection();
+                        bool dir = northDirection(game);
                         if (dir)
-                        {std::cout<<"WOHOOOO! Your location is Dean's Pod";}
-                        else{std::cout<<"WOHOOOO! Your location is Baithak";}
+                        {
+                        game.displayOutcome("DP.png");
+                        std::cout<<"WOHOOOO! Your location is Dean's Pod";
+                        }
+                        else{
+                            game.displayOutcome("Baithak.png");
+                            std::cout<<"WOHOOOO! Your location is Baithak";
+                            }
                     }
             }
-    }else
+    }else //0 as a random num
     {
-        bool nasha = smokingArea();
+        bool nasha = smokingArea(game);
         if (nasha)
         {
-            bool faculty = onlyFaculty();
+            bool faculty = onlyFaculty(game);
             if (faculty)
-            {std::cout<<"WOHOOOO! Your location is Mehfil";}
-            else{std::cout<<"WOHOOOO! Your location is Baithak";}
+            {
+                game.displayOutcome("Mehfil.png");
+                std::cout<<"WOHOOOO! Your location is Mehfil";
+                }
+            else{
+                game.displayOutcome("Baithak.png");
+                std::cout<<"WOHOOOO! Your location is Baithak";
+                }
         }
         else
         {
-            bool lec = lectureHall();
+            bool lec = lectureHall(game);
             if (lec)
             {
-                bool cap = capacity();
+                bool cap = capacity(game);
                     if (cap)
                     {
+                        game.displayOutcome("Audi.png");
                         std::cout<<"WOHOOOO! Your location is Auditorium";
                     }
                     else
                     {
+                        game.displayOutcome("TR.png");
                         std::cout<<"WOHOOOO! Your location is Tariq Rafi";
                     }
             }
@@ -193,17 +362,30 @@ void FirstFloor::questionOrder()
                 int num4 = NewRandomNumGenerator(2);
                 if (num4 == 1)
                 {
-                    bool parhaku = multiStory();
+                    bool parhaku = multiStory(game);
                     if (parhaku)
-                    {std::cout<<"WOHOOOO! Your location is Library";}
-                    else{std::cout<<"WOHOOOO! Your location is Dean's Pod";}
+                    {
+                    game.displayOutcome("Lib.png");
+                    std::cout<<"WOHOOOO! Your location is Library";
+                    }
+                    else{
+                    game.displayOutcome("DP.png");
+                    std::cout<<"WOHOOOO! Your location is Dean's Pod";
+                    }
                 }
                 else
                 {
-                    bool dir = northDirection();
+                    bool dir = northDirection(game);
                     if (dir)
-                    {std::cout<<"WOHOOOO! Your location is Dean's Pod";}
-                    else{std::cout<<"WOHOOOO! Your location is Library";}
+                    {
+                    game.displayOutcome("DP.png");
+                    std::cout<<"WOHOOOO! Your location is Dean's Pod";
+                    }
+                    else
+                    {
+                    game.displayOutcome("Lib.png");
+                    std::cout<<"WOHOOOO! Your location is Library";
+                    }
                 }
             }
         }

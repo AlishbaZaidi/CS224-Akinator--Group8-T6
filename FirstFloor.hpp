@@ -8,16 +8,14 @@ class FirstFloor : public Locations
 {
 public:
     std::string option;
-    
-    // FirstFloor() = default;
 
-    bool eastDirection();
-    bool northDirection();
-    bool smokingArea();
-    bool capacity();
-    bool lectureHall();
-    bool multiStory();
-    bool onlyFaculty();
+    bool eastDirection(Game& game);
+    bool northDirection(Game& game);
+    bool smokingArea(Game& game);
+    bool capacity(Game& game);
+    bool lectureHall(Game& game);
+    bool multiStory(Game& game);
+    bool onlyFaculty(Game& game);
     void questionOrder();
 
 };
