@@ -18,6 +18,17 @@ public:
     bool classroom();
     bool multiStory();
     bool famousPerson();
+    bool airCourt();
+    bool waterCourt();
+    bool fireCourt();
+    bool earthCourt();
+    bool comfortZone();
+    bool hygenicFood();
+    bool lechturaHall();
+    bool multipleOffices();
+    bool eventsKarao();
+    bool wellness();
+    bool careerOffice();
     void questionOrder();
 
 };
