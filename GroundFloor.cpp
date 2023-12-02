@@ -10,7 +10,7 @@ public:
     // GroundFloor() = default;
 
     bool GroundFloor::westDirection(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you are thinking in West?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -23,7 +23,7 @@ public:
     };
 
     bool GroundFloor::northDirection(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you are thinking in North?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -36,7 +36,7 @@ public:
     };
 
     bool GroundFloor::centralDirection(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you are thinking a cnetral location?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -49,7 +49,7 @@ public:
     };
 
     bool GroundFloor::courtyard(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you are thinking a courtyard?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -62,7 +62,7 @@ public:
     };
 
     bool GroundFloor::classroom(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you are thinking used as classroom?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -75,7 +75,7 @@ public:
     };
 
     bool GroundFloor::multiStory(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is your location found on multiple floors?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
@@ -88,7 +88,7 @@ public:
     };
 
     bool GroundFloor::famousPerson(){
-        std::cout << "Is the location you are thinking in East?" << "\n";
+        std::cout << "Is the location you're thinking of named after a famous personality?" << "\n";
         std::cin >> option;
         if (option == "yes")
         {
