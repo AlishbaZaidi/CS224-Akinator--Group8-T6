@@ -23,6 +23,7 @@ public:
     bool LowerGround(Game& game);
     bool First(Game& game);
     bool Second(Game& game);
+    bool Fourth(Game &game);
     void ourFloor();
     void updateFloor();
 };

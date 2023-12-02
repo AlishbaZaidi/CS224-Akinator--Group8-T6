@@ -5,7 +5,8 @@
 #include"LowerGroundFloor.hpp"
 #include"SecondFloor.hpp"
 #include"game.hpp"
-// #include"GroundFLoor.hpp"
+#include"GroundFLoor.hpp"
+#include "FourthFloor.hpp"
 
 
 int main(int argc, char* argv[])
@@ -26,12 +27,16 @@ int main(int argc, char* argv[])
         LowerGroundFloor LGF;
         LGF.questionOrder();
     }
-    // else if(loc.floor == "Ground Floor")
-    // {
-        
-    // } 
-    // else if(loc.floor == "Fourth Floor")
-    // {}
+    else if(loc.floor == "Ground Floor")
+    {    
+            GroundFloor GF;
+            GF.questionOrder();
+    } 
+    else if(loc.floor == "Fourth Floor")
+    {
+        FourthFloor fl;
+        fl.questionOrder();
+    }
     else if(loc.floor == "Second Floor")
     {
         SecondFloor SF;

@@ -4,7 +4,6 @@
 // #include"Extras.cpp"
 // #include"main.cpp"
 // #include <ctime>
-
 // Locations::Locations(){}
 
 bool Locations::Ground(Game& game) 
@@ -24,9 +23,11 @@ bool Locations::Ground(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -59,9 +60,11 @@ bool Locations::LowerGround(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -92,9 +95,11 @@ bool Locations::LowerGround(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -129,9 +134,11 @@ bool Locations::Second(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -148,17 +155,58 @@ bool Locations::Second(Game& game)
         } 
     }
 
+bool Locations::Fourth(Game& game) 
+    {
+        // std::cout << "Is this floor newly made?" << "\n";
+        // std::cin >> option;
+        game.loadImage("QFourth.png");
+        game.render();
+
+        SDL_Event e;
+        while (true) {
+            if (SDL_PollEvent(&e) != 0) {
+                if (e.type == SDL_QUIT) {
+                    exit(0);
+                } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                        option = "yes";
+                        SDL_Delay(500);
+                        break;
+                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                        option = "no";
+                        SDL_Delay(500);
+                        break;
+                    }
+                }
+            }
+        }
+        if (option == "yes")
+        {
+            newmade = true;
+            return true;
+        }
+        else
+        {
+            return false;
+        } 
+    }
+
+
+
+
 void Locations::ourFloor()
     {
         Game game;
         bool returntype = false;
-        int arr[4] = {0, 0, 0, 0};
+        int arr[5] = {0, 0, 0, 0, 0};
         while (!returntype)
         {
-            int number = NewRandomNumGenerator(4);
-            while (newisInArray(number, arr, 4))
+            int number = NewRandomNumGenerator(5);
+            while (newisInArray(number, arr, 5))
             {
-                number = NewRandomNumGenerator(4);
+                number = NewRandomNumGenerator(5);
             }
             for (int i = 0; i < 4; i++)
             {
@@ -184,13 +232,12 @@ void Locations::ourFloor()
             {
                 returntype = this->Second(game);
             }
-            else
+            else if (number == 5)
             {
-                // newmade = true;
-                // returntype = newmade;
-                std::cout<<"Wohooo! Your location is Horizon";
+                returntype = this->Fourth(game);
             }
         }
+        
     }
 
 void Locations::updateFloor()
@@ -211,7 +258,7 @@ void Locations::updateFloor()
         {
             floor = "Second Floor";
         }
-        else
+        else if(newmade == true)
         {
             floor = "Fourth Floor";
         }
