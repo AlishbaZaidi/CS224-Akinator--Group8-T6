@@ -1,6 +1,6 @@
 #include "game.hpp"
 
-Game::Game() : window(nullptr), renderer(nullptr), currentTexture(nullptr), running(true) {
+Game::Game() : window(nullptr), renderer(nullptr), currentTexture(nullptr), running(true), userWantsMusic(false) {
     initSDL();
 }
 
@@ -27,6 +27,7 @@ Game::~Game()
 }
 
 void Game::initSDL() {
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         // Handle SDL initialization error
     }
@@ -104,6 +105,13 @@ bool Game::isRunning() const {
 void Game::run()
 {
     renderInitialScreen();
+
+    bool king = promptMusicChoice();
+    if (king) 
+    {
+        MG.playMusic("Music.mp3");
+    }
+
     bool clicked = false;
     SDL_Event e;
     while (!clicked)
@@ -127,7 +135,51 @@ void Game::run()
 void Game::displayOutcome(const std::string& outcomeImage) {
     loadImage(outcomeImage); 
     render();
-
+    if (userWantsMusic) {
+        MG.playMusic("Outro.mp3");
+    }
     // Optionally wait for a user input or a set amount of time before proceeding
     SDL_Delay(3000); // For example, wait for 3 seconds
+}
+
+
+
+bool Game::promptMusicChoice() {
+    SDL_Window* choiceWindow = SDL_CreateWindow("Music Choice", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 200, 200, SDL_WINDOW_SHOWN);
+    SDL_Renderer* choiceRenderer = SDL_CreateRenderer(choiceWindow, -1, SDL_RENDERER_ACCELERATED);
+    SDL_Surface* loadedSurface = IMG_Load("Popup.png");
+    SDL_Texture* popupTexture = SDL_CreateTextureFromSurface(choiceRenderer, loadedSurface);
+    SDL_FreeSurface(loadedSurface); // Free the surface after creating the texture
+
+    bool choiceMade = false;
+    SDL_Event e;
+
+    while (!choiceMade) {
+        while (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
+                exit(0);
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                int x, y;
+                SDL_GetMouseState(&x, &y);
+                if (x >= 107 && x <= 167 && y >= 68 && y <= 131) { // YES coordinates
+                    userWantsMusic = true;
+                    // MG.playMusic("Music.mp3"); // Replace with correct path
+                    choiceMade = true;
+                } else if (x >= 30 && x <= 90 && y >= 68 && y <= 131) { // NO coordinates
+                    userWantsMusic = false;
+                    MG.stopMusic(); // Stop music if playing
+                    choiceMade = true;
+                }
+            }
+        }
+        SDL_RenderClear(choiceRenderer);
+        SDL_RenderCopy(choiceRenderer, popupTexture, NULL, NULL);
+        SDL_RenderPresent(choiceRenderer);
+    }
+
+    SDL_DestroyTexture(popupTexture);
+    SDL_DestroyRenderer(choiceRenderer);
+    SDL_DestroyWindow(choiceWindow);
+
+    return userWantsMusic;
 }
