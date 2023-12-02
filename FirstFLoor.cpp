@@ -241,7 +241,7 @@ bool FirstFloor::onlyFaculty(Game& game)
 
 void FirstFloor::questionOrder()
     {
-        Game game;
+        Game& game = Game::getInstance();
         int num1 = NewRandomNumGenerator(2);
         if (num1 == 1)
         {

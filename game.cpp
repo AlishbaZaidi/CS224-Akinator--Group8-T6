@@ -32,7 +32,7 @@ void Game::initSDL() {
         // Handle SDL initialization error
     }
 
-    window = SDL_CreateWindow("Game Title", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
+    window = SDL_CreateWindow("HU-Quest", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
     if (!window) {
         // Handle window creation error
     }
@@ -107,9 +107,11 @@ void Game::run()
     renderInitialScreen();
 
     bool king = promptMusicChoice();
+    
     if (king) 
     {
-        MG.playMusic("Music.mp3");
+        startMusic();
+        // MG.playMusic("Music.mp3");
     }
 
     bool clicked = false;
@@ -136,10 +138,12 @@ void Game::displayOutcome(const std::string& outcomeImage) {
     loadImage(outcomeImage); 
     render();
     if (userWantsMusic) {
-        MG.playMusic("Outro.mp3");
+        // MG.playMusic("Outro.mp3");
+        MusicManager& MG = MusicManager::getInstance();
+        MG.playMusic("Outro.mp3"); 
     }
     // Optionally wait for a user input or a set amount of time before proceeding
-    SDL_Delay(3000); // For example, wait for 3 seconds
+    SDL_Delay(5000); // For example, wait for 3 seconds
 }
 
 
@@ -167,7 +171,7 @@ bool Game::promptMusicChoice() {
                     choiceMade = true;
                 } else if (x >= 30 && x <= 90 && y >= 68 && y <= 131) { // NO coordinates
                     userWantsMusic = false;
-                    MG.stopMusic(); // Stop music if playing
+                    stopMusic(); // Stop music if playing
                     choiceMade = true;
                 }
             }
@@ -182,4 +186,14 @@ bool Game::promptMusicChoice() {
     SDL_DestroyWindow(choiceWindow);
 
     return userWantsMusic;
+}
+
+void Game::startMusic() {
+    if (userWantsMusic) {
+        MusicManager::getInstance().playMusic("Music.mp3");  // Add correct path
+    }
+}
+
+void Game::stopMusic() {
+    MusicManager::getInstance().stopMusic();
 }

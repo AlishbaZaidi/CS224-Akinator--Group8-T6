@@ -198,7 +198,7 @@ bool Locations::Fourth(Game& game)
 
 void Locations::ourFloor()
     {
-        Game game;
+        Game& game = Game::getInstance();
         bool returntype = false;
         int arr[5] = {0, 0, 0, 0, 0};
         while (!returntype)

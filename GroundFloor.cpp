@@ -727,7 +727,7 @@ bool GroundFloor::careerOffice(Game& game){
 
 void GroundFloor::questionOrder()
 {
-    Game game;
+    Game& game = Game::getInstance();
     bool west = westDirection(game);
     if(west){
         int num1 = NewRandomNumGenerator(2);
@@ -928,4 +928,3 @@ void GroundFloor::questionOrder()
         }
     }
 }
-

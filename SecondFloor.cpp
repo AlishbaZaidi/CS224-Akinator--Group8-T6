@@ -167,7 +167,7 @@ bool SecondFloor :: collabPlace(Game& game){
 };
 
 void SecondFloor :: questionOrder(){
-    Game game;
+    Game& game = Game::getInstance();
     bool north = northDirection(game);
     if(north){
         bool pod = leadersPlace(game);

@@ -135,7 +135,7 @@ bool FourthFloor :: cafe(Game& game){
 
 void FourthFloor :: questionOrder()
 {
-    Game game;
+    Game& game = Game::getInstance();
     bool blue = blueTheme(game);
     if(blue){
         game.displayOutcome("TidalPool.png");

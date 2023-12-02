@@ -3,7 +3,11 @@
 
 class MusicManager{
 public:
-    MusicManager();
+    static MusicManager& getInstance()
+    {
+        static MusicManager instance;
+        return instance;
+    }
     ~MusicManager();
 
     void playMusic(const char* file, int loops = -1);
@@ -11,6 +15,7 @@ public:
     void stopMusic();
 
 private:
+    MusicManager();
     Mix_Music* currentMusic;
 };
 

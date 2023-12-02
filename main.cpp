@@ -11,7 +11,7 @@
 
 int main(int argc, char* argv[])
 {
-    Game game;
+    Game& game = Game::getInstance();
     game.run();
     Locations loc;
     loc.ourFloor();
