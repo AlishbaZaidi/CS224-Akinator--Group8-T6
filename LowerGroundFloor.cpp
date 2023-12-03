@@ -378,19 +378,23 @@ void LowerGroundFloor::questionOrder()
     if(east){
         bool music = famousName(game);
         if(music){
+            game.displayOutcome("Music.png");
             std::cout<<"WOO_HOO!!! Your desired location is Music Room";
         }
         else{
             bool cockroaches = cockroach(game);
             if(cockroaches){
+                game.displayOutcome("Tapal.png");
                 std::cout<<"WOO-HOO!! You're thinking of Tapal Cafeteria";
             }
             else{
                 bool dhaba = openArea(game);
                 if(dhaba){
+                    game.displayOutcome("Dhaba.png");
                     std::cout<<"Dhaba souch rahey hou na hehe";
                 }
                 else{
+                    game.displayOutcome("Dukaan.png");
                     std::cout<<"Easy hougaya bhai! Aap tou Dukaan ki baat kar rahey!";
                 }
             }
@@ -403,27 +407,33 @@ void LowerGroundFloor::questionOrder()
             if(eventPlace){
                 bool stages = stage(game);
                 if(stages){
+                    game.displayOutcome("Amphi.png");
                     std::cout<<"WOO-HOO!! You're thinking of Amphitheatre";
                 }
                 else{
+                    game.displayOutcome("Courts.png");
                     std::cout<<"WOO-HOO!! You're thinking of Courts";
                 }
             }
             else{
+                game.displayOutcome("Gym.png");
                 std::cout<<"WOO-HOO! It's Gym";
             }
         }
         else{
             bool fLounge = maleRestricted(game);
             if(fLounge){
+                game.displayOutcome("FemaleLounge.png");
                 std::cout<<"WOO-HOO! Khawateen Lounge";
             }
             else{
                 bool study = groupStudy(game);
                 if(study){
+                    game.displayOutcome("Learn.png");
                     std::cout<<"WOO-HOO!! You're thinking of Learn Courtyard";
                 }
                 else{
+                    game.displayOutcome("ParkingArea.png");
                     std::cout<<"WOO-HOO!! You're thinking of the Parking areas";
                 }
             }
