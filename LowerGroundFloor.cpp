@@ -2,46 +2,60 @@
 #include <iostream>
 #include "LowerGroundFloor.hpp"
 
+// Define the eastDirection function of the LowerGroundFloor class
 bool LowerGroundFloor::eastDirection(Game& game) 
-    {
-        // std::cout << "Is the location you are thinking in East?" << "\n";
-        // std::cin >> option;
-        game.loadImage("QEast.png");
-        game.render();
+{
+    // Load an image named 'QEast.png' and render it using the game instance
+    game.loadImage("QEast.png");
+    game.render();
 
-        SDL_Event e;
-        while (true) 
+    SDL_Event e;
+    // Start an infinite loop to handle SDL events
+    while (true) 
+    {
+        // Check for SDL events
+        if (SDL_PollEvent(&e) != 0) 
         {
-            if (SDL_PollEvent(&e) != 0) 
+            // If the event is a request to quit, exit the program
+            if (e.type == SDL_QUIT) 
             {
-                if (e.type == SDL_QUIT) 
+                exit(0);
+            } 
+            // Handle mouse button down events
+            else if (e.type == SDL_MOUSEBUTTONDOWN) 
+            {
+                int x, y;
+                // Get the mouse coordinates
+                SDL_GetMouseState(&x, &y);
+                // Check if coordinates are within the 'YES' button bounds
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
-                    exit(0);
-                } else if (e.type == SDL_MOUSEBUTTONDOWN) 
+                    option = "yes";
+                    break; // Exit the loop if 'YES' is clicked
+                } 
+                // Check if coordinates are within the 'NO' button bounds
+                else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
-                    int x, y;
-                    SDL_GetMouseState(&x, &y);
-                    if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                    { // YES coordinates
-                        option = "yes";
-                        break;
-                    } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                    { // NO coordinates
-                        option = "no";
-                        break;
-                    }
+                    option = "no";
+                    break; // Exit the loop if 'NO' is clicked
                 }
             }
         }
-        if (option == "yes")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
+    // Return true if the option is 'yes', otherwise false
+    if (option == "yes")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+// Similar structure for centralDirection, maleRestricted, cockroach, groupStudy, famousName, openArea, events, and stage methods
+// These methods follow the same logic as eastDirection but ask different questions and load different images
+
 
 bool LowerGroundFloor::centralDirection(Game& game) 
     {
@@ -371,9 +385,15 @@ bool LowerGroundFloor::stage(Game& game)
         }
     }
 
+    
+// Define the questionOrder function of the LowerGroundFloor class
 void LowerGroundFloor::questionOrder()
 {
+    // Get a reference to the singleton Game instance
     Game& game = Game::getInstance();
+    // Follow a decision tree based on the responses to the questions
+    // The logic involves calling different functions defined above and based on their return values
+    // displaying different outcomes. The exact logic is omitted for brevity.
     bool east = eastDirection(game);
     if(east){
         bool music = famousName(game);
