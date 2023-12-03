@@ -274,7 +274,7 @@ void Locations::ourFloor()
             game.startMusic("SedOutro.mp3");
             game.loadImage("OutcomeScreen.png"); // Load your outcome screen image
             game.render();
-            SDL_Delay(10000); // Wait for 3 seconds
+            SDL_Delay(7500); // Wait for 3 seconds
             game.closeSDL();
             break;
         }        
