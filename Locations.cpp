@@ -196,49 +196,114 @@ bool Locations::Fourth(Game& game)
 
 
 
+// void Locations::ourFloor()
+//     {
+//         Game& game = Game::getInstance();
+//         bool returntype = false;
+//         int arr[5] = {0, 0, 0, 0, 0};
+//         while (!returntype)
+//         {
+//             int number = NewRandomNumGenerator(5);
+//             while (newisInArray(number, arr, 5))
+//             {
+//                 number = NewRandomNumGenerator(5);
+//             }
+//             for (int i = 0; i < 4; i++)
+//             {
+//                 if (arr[i] == 0)
+//                 {
+//                     arr[i] = number;
+//                     break; 
+//                 }
+//             }
+//             if (number == 1)
+//             {
+//                 returntype = this->Ground(game);
+//             }
+//             else if (number == 2)
+//             {
+//                 returntype = this->LowerGround(game);
+//             }
+//             else if (number == 3)
+//             {
+//                 returntype = this->First(game);
+//             }
+//             else if (number == 4)
+//             {
+//                 returntype = this->Second(game);
+//             }
+//             else if (number == 5)
+//             {
+//                 returntype = this->Fourth(game);
+//             }
+//         }
+        
+//     }
+
 void Locations::ourFloor()
+{
+    Game& game = Game::getInstance();
+    bool returntype = false;
+    int arr[5] = {0, 0, 0, 0, 0};
+    int noCounter = 0; // Counter for 'No' responses
+
+    while (!returntype)
     {
-        Game& game = Game::getInstance();
-        bool returntype = false;
-        int arr[5] = {0, 0, 0, 0, 0};
-        while (!returntype)
+        int number = NewRandomNumGenerator(5);
+        while (newisInArray(number, arr, 5))
         {
-            int number = NewRandomNumGenerator(5);
-            while (newisInArray(number, arr, 5))
+            number = NewRandomNumGenerator(5);
+        }
+        for (int i = 0; i < 5; i++) // corrected loop condition
+        {
+            if (arr[i] == 0)
             {
-                number = NewRandomNumGenerator(5);
-            }
-            for (int i = 0; i < 4; i++)
-            {
-                if (arr[i] == 0)
-                {
-                    arr[i] = number;
-                    break; 
-                }
-            }
-            if (number == 1)
-            {
-                returntype = this->Ground(game);
-            }
-            else if (number == 2)
-            {
-                returntype = this->LowerGround(game);
-            }
-            else if (number == 3)
-            {
-                returntype = this->First(game);
-            }
-            else if (number == 4)
-            {
-                returntype = this->Second(game);
-            }
-            else if (number == 5)
-            {
-                returntype = this->Fourth(game);
+                arr[i] = number;
+                break; 
             }
         }
-        
+        bool response = false;
+        if (number == 1)
+        {
+            response = this->Ground(game);
+        }
+        else if (number == 2)
+        {
+            response = this->LowerGround(game);
+        }
+        else if (number == 3)
+        {
+            response = this->First(game);
+        }
+        else if (number == 4)
+        {
+            response = this->Second(game);
+        }
+        else if (number == 5)
+        {
+            response = this->Fourth(game);
+        }
+
+        if (!response)
+        {
+            noCounter++;
+            if (noCounter >= 5) // Check if all responses are 'No'
+            {
+                // Option 1: Close the game
+                // game.closeSDL();
+                // break;
+
+                // Option 2: Display an outcome screen and close after a delay
+                game.loadImage("OutcomeScreen.png"); // Load your outcome screen image
+                game.render();
+                SDL_Delay(3000); // Wait for 3 seconds
+                game.closeSDL();
+                break;
+            }
+        }
     }
+}
+
 
 void Locations::updateFloor()
     {
