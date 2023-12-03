@@ -45,3 +45,4 @@ private:
     void closeSDL();
     // void destroyTextures();
 };
+
