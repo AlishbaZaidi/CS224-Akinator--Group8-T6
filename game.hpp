@@ -31,6 +31,7 @@ public:
     bool promptMusicChoice();
     void startMusic();
     void stopMusic();
+    void closeSDL();
 
 
 private:
@@ -40,9 +41,7 @@ private:
     SDL_Texture* currentTexture;
     bool running;
     
-    
     void initSDL();
-    void closeSDL();
     // void destroyTextures();
 };
 
