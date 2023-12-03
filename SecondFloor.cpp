@@ -1,49 +1,59 @@
 #include <string>
 #include <iostream>
 #include "SecondFloor.hpp"
-// #include "game.hpp"
 
-// SecondFloor() = default;
 
+// Define the northDirection function for the SecondFloor class
 bool SecondFloor :: northDirection(Game& game){
-    //std::cout << "Is the location you are thinking in North?" << "\n";
-    //std::cin >> option;
+    // Load and render an image for the north direction question
     game.loadImage("QNorth.png");
     game.render();
 
     SDL_Event e;
+    // Start an infinite loop to handle SDL events
     while (true) 
     {
+        // Check for SDL events
         if (SDL_PollEvent(&e) != 0) 
         {
+            // If the event is a request to quit, exit the program
             if (e.type == SDL_QUIT) 
             {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
+            } 
+            // Handle mouse button down events
+            else if (e.type == SDL_MOUSEBUTTONDOWN) 
             {
                 int x, y;
+                // Get the mouse coordinates
                 SDL_GetMouseState(&x, &y);
+                // Check if coordinates are within the 'YES' button bounds
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                {
                     option = "yes";
-                    break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                    break; // Exit loop if 'YES' clicked
+                } 
+                // Check if coordinates are within the 'NO' button bounds
+                else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
+                {
                     option = "no";
-                    break;
+                    break; // Exit loop if 'NO' clicked
                 }
             }
         }
     }
-        if (option == "yes")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+    // Return true if option is 'yes', otherwise false
+    if (option == "yes")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 };
+
+
 
 bool SecondFloor :: leadersPlace(Game& game){
     //std::cout << "Is this area primarily used for high-level executive decision-making?" << "\n";
@@ -166,8 +176,12 @@ bool SecondFloor :: collabPlace(Game& game){
         }
 };
 
+
+// Define the questionOrder function for the SecondFloor class
 void SecondFloor :: questionOrder(){
+    // Get a reference to the singleton Game instance
     Game& game = Game::getInstance();
+    // Begin a decision tree based on responses to questions
     bool north = northDirection(game);
     if(north){
         bool pod = leadersPlace(game);
