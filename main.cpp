@@ -1,26 +1,31 @@
 #include <iostream>
-#include"Extras.hpp"
-#include"Locations.hpp"
-#include"FirstFloor.hpp"
-#include"LowerGroundFloor.hpp"
-#include"SecondFloor.hpp"
-#include"game.hpp"
-#include"GroundFLoor.hpp"
-#include"FourthFloor.hpp"
-#include"Students.hpp"
+#include "Extras.hpp"
+#include "Locations.hpp"
+#include "FirstFloor.hpp"
+#include "LowerGroundFloor.hpp"
+#include "SecondFloor.hpp"
+#include "game.hpp"
+#include "GroundFLoor.hpp"
+#include "FourthFloor.hpp"
+#include "Students.hpp"
 
-
+// Main function
 int main(int argc, char* argv[])
 {
-    
+    // Declare variables for game mode and user option
     std::string mode, option;
+
+    // Get the singleton instance of the Game class
     Game& game = Game::getInstance();
+
+    // Run the game
     game.run(); 
-    // std::cout << "students or locations?\n";
-    // std::cin >> mode;
+
+    // Load the image for the mode selection screen
     game.loadImage("Choose.png");
     game.render();
 
+    // SDL event handling
     SDL_Event e;
     while (true) {
         if (SDL_PollEvent(&e) != 0) {
@@ -29,11 +34,12 @@ int main(int argc, char* argv[])
             } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
+                // Check if user clicked on "YES" button
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
                     option = "yes";
                     SDL_Delay(500);
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // Check if user clicked on "NO" button
                     option = "no";
                     SDL_Delay(500);
                     break;
@@ -41,16 +47,22 @@ int main(int argc, char* argv[])
             }
         }
     }
+
+    // Branch based on user option
     if (option == "yes")
     {
+        // If user chooses "students," initiate Students class and run questionOrder
         Students stud;
         stud.questionOrder();
     }
     else if (option == "no")
     {
+        // If user chooses "locations," initiate Locations class and handle floor-specific logic
         Locations loc;
         loc.ourFloor();
         loc.updateFloor();
+
+        // Branch based on the selected floor
         if (loc.floor == "First Floor")
         {
             FirstFloor FL;
@@ -58,14 +70,13 @@ int main(int argc, char* argv[])
         }
         else if(loc.floor == "Lower Ground Floor")
         {
-
             LowerGroundFloor LGF;
             LGF.questionOrder();
         }
         else if(loc.floor == "Ground Floor")
         {    
-                GroundFloor GF;
-                GF.questionOrder();
+            GroundFloor GF;
+            GF.questionOrder();
         } 
         else if(loc.floor == "Fourth Floor")
         {
@@ -83,5 +94,6 @@ int main(int argc, char* argv[])
     //     Students stud;
     //     stud.questionOrder();
     // }
+    // Return 0 to indicate successful execution
     return 0;
 }

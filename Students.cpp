@@ -2,423 +2,309 @@
 #include <iostream>
 #include "Students.hpp"
 
-
-bool Students :: genderM(Game& game){
-    // std::cout << "Is the person you're thinking of a male student?" << "\n";
-    // std::cin >> option;
+bool Students::genderM(Game& game) {
+    // Display the image and handle user input for gender
     game.loadImage("Qmale.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is male, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: birthdayMonth(Game& game){
-    // std::cout << "Does the person you're thinking has their birthday in the month of November" << "\n";
-    // std::cin >> option;
+bool Students::birthdayMonth(Game& game) {
+    // Display the image and handle user input for birthday month
     game.loadImage("Qbirthmonth.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the birthday is in November, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: outstation(Game& game){
-    // std::cout << "Are you thinking of an outstation student?" << "\n";
-    // std::cin >> option;
+bool Students::outstation(Game& game) {
+    // Display the image and handle user input for outstation status
     game.loadImage("Qoutstation.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is outstation, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: initialM(Game& game){
-    // std::cout << "Are you thinking of a person who has M as their initial?" << "\n";
-    // std::cin >> option;
+bool Students::initialM(Game& game) {
+    // Display the image and handle user input for the initial 'M'
     game.loadImage("QMinitial.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the initial is 'M', false otherwise
+    return (option == "yes");
 }
 
-bool Students :: school(Game& game){
-    // std::cout << "Does the person you're thinking of belong to AHSS?" << "\n";
-    // std::cin >> option;
+bool Students::school(Game& game) {
+    // Display the image and handle user input for school affiliation
     game.loadImage("QAhss.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person belongs to AHSS, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: majorCS(Game& game){
-    // std::cout << "Does the person you're thinking of is doing CS?" << "\n";
-    // std::cin >> option;
+bool Students::majorCS(Game& game) {
+    // Display the image and handle user input for majoring in Computer Science
     game.loadImage("QCE.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is majoring in Computer Science, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: majorEE(Game& game){
-    // std::cout << "Does the person you're thinking of is doing EE?" << "\n";
-    // std::cin >> option;
+bool Students::majorEE(Game& game) {
+    // Display the image and handle user input for majoring in Electrical Engineering
     game.loadImage("QEE.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is majoring in Electrical Engineering, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: bdayStar(Game& game){
-    // std::cout << "Is the person you're thinking of an Aquarius?" << "\n";
-    // std::cin >> option;
+bool Students::bdayStar(Game& game) {
+    // Display the image and handle user input for being born under the star sign Aquarius
     game.loadImage("QAqua.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is born under the star sign Aquarius, false otherwise
+    return (option == "yes");
 }
 
-bool Students :: calculusRepeat(Game& game){
-    // std::cout << "Is the person you're thinking repeating calculus 1 for the third time?" << "\n";
-    // std::cin >> option;
+bool Students::calculusRepeat(Game& game) {
+    // Display the image and handle user input for repeating calculus
     game.loadImage("QCalcrepeat.png");
     game.render();
 
     SDL_Event e;
-    while (true) 
-    {
-        if (SDL_PollEvent(&e) != 0) 
-        {
-            if (e.type == SDL_QUIT) 
-            {
+    while (true) {
+        if (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
                 exit(0);
-            } else if (e.type == SDL_MOUSEBUTTONDOWN) 
-            {
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
                 SDL_GetMouseState(&x, &y);
-                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
-                { // YES coordinates
+                if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
                     break;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
-                { // NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
                     break;
                 }
             }
         }
     }
-    if (option == "yes")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+
+    // Return true if the person is repeating calculus, false otherwise
+    return (option == "yes");
 }
 
-void Students :: questionOrder(){
+void Students::questionOrder() {
+    // Get the singleton instance of the game
     Game& game = Game::getInstance();
+
+    // Ask a series of questions based on the order defined
     bool male = genderM(game);
-    if(male){
+    if (male) {
         bool out = outstation(game);
-        if(out){
+        if (out) {
             bool cs = majorCS(game);
-            if(cs){
+            if (cs) {
                 bool calc = calculusRepeat(game);
-                if(calc){
+                if (calc) {
                     game.displayOutcome("Ashar.png");
-                    std::cout<<"Leutinent Ashar Abbasi Pakistan Navy";
-                }
-                else{
+                    std::cout << "Leutinent Ashar Abbasi Pakistan Navy";
+                } else {
                     game.displayOutcome("Bilal.png");
-                    std::cout<<"Bilal Ahmed Soomro - Wadero of Khairpur";
+                    std::cout << "Bilal Ahmed Soomro - Wadero of Khairpur";
                 }
-            }
-            else{
+            } else {
                 game.displayOutcome("Mubashir.png");
-                std::cout<<"Mubashir Anees Soomro - Shikarpur waro";
+                std::cout << "Mubashir Anees Soomro - Shikarpur waro";
             }
-        }
-        else{
+        } else {
             bool nov = birthdayMonth(game);
-            if(nov){
+            if (nov) {
                 game.displayOutcome("Shaaf.png");
-                std::cout<<"Shaaf Farooq - The only King at Habib";
-            }
-            else{
+                std::cout << "Shaaf Farooq - The only King at Habib";
+            } else {
                 game.displayOutcome("Huzaifa.png");
-                std::cout<<"Huzaifa Ahmed Khan - Real Chad";
+                std::cout << "Huzaifa Ahmed Khan - Real Chad";
             }
         }
-    }    
-    else{
+    } else {
         bool ahss = school(game);
-        if(ahss){
+        if (ahss) {
             game.displayOutcome("Saba.png");
-            std::cout<<"Saba Nisar Soomro - Queen of Larkana";
-        }
-        else{
+            std::cout << "Saba Nisar Soomro - Queen of Larkana";
+        } else {
             bool ee = majorEE(game);
-            if(ee){
+            if (ee) {
                 game.displayOutcome("Mysha.png");
-                std::cout<<"Mysha Zulfiqar - Female Andrew Tate";
-            }
-            else{
+                std::cout << "Mysha Zulfiqar - Female Andrew Tate";
+            } else {
                 bool star = bdayStar(game);
-                if(star){
+                if (star) {
                     game.displayOutcome("Sajal.png");
-                    std::cout<<"Sajal Fatima - The Model of Habib";
-                }
-                else{
+                    std::cout << "Sajal Fatima - The Model of Habib";
+                } else {
                     game.displayOutcome("Alishba.png");
-                    std::cout<<"The one & only Syeda Alishba Zaidi";
+                    std::cout << "The one & only Syeda Alishba Zaidi";
                 }
             }
         }
