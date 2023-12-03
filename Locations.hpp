@@ -1,43 +1,45 @@
 #pragma once
-#include <string>
+#include<string>
 #include <iostream>
-#include "Extras.hpp"
+#include"Extras.hpp"
 #include "game.hpp"
 #include <ctime>
 
-class Locations {
-private:
-    // Private data members (if any)
-
+// Begin definition of the Locations class
+class Locations
+{
 public:
+    // Public section of the class, members are accessible from outside the class
+
     std::string direction, floor, option;
+    // Declares three string variables: 'direction', 'floor', and 'option'
+
     bool piano = false;
     bool newmade = false;
     bool divide = false;
     bool park = false;
     bool reception = false;
+    // Declares boolean variables with initial values set to false. These likely represent game states or conditions.
 
-    // Public member functions
-    // Locations() = default; 
 
-    // Function to handle events on the Ground floor
     bool Ground(Game& game);
+    // Declares a member function named 'Ground' that takes a reference to a Game object and returns a boolean
 
-    // Function to handle events on the Lower Ground floor
     bool LowerGround(Game& game);
+    // Declares a member function named 'LowerGround' similar to 'Ground'
 
-    // Function to handle events on the First floor
     bool First(Game& game);
+    // Declares a member function named 'First' similar to 'Ground'
 
-    // Function to handle events on the Second floor
     bool Second(Game& game);
+    // Declares a member function named 'Second' similar to 'Ground'
 
-    // Function to handle events on the Fourth floor
-    bool Fourth(Game& game);
+    bool Fourth(Game &game);
+    // Declares a member function named 'Fourth' similar to 'Ground'
 
-    // Function to display the current floor
     void ourFloor();
+    // Declares a member function named 'ourFloor' that does not return a value
 
-    // Function to update the current floor based on user choices
     void updateFloor();
+    // Declares a member function named 'updateFloor' that does not return a value
 };
