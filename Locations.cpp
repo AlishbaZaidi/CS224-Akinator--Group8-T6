@@ -194,52 +194,6 @@ bool Locations::Fourth(Game& game)
     }
 
 
-
-
-// void Locations::ourFloor()
-//     {
-//         Game& game = Game::getInstance();
-//         bool returntype = false;
-//         int arr[5] = {0, 0, 0, 0, 0};
-//         while (!returntype)
-//         {
-//             int number = NewRandomNumGenerator(5);
-//             while (newisInArray(number, arr, 5))
-//             {
-//                 number = NewRandomNumGenerator(5);
-//             }
-//             for (int i = 0; i < 4; i++)
-//             {
-//                 if (arr[i] == 0)
-//                 {
-//                     arr[i] = number;
-//                     break; 
-//                 }
-//             }
-//             if (number == 1)
-//             {
-//                 returntype = this->Ground(game);
-//             }
-//             else if (number == 2)
-//             {
-//                 returntype = this->LowerGround(game);
-//             }
-//             else if (number == 3)
-//             {
-//                 returntype = this->First(game);
-//             }
-//             else if (number == 4)
-//             {
-//                 returntype = this->Second(game);
-//             }
-//             else if (number == 5)
-//             {
-//                 returntype = this->Fourth(game);
-//             }
-//         }
-        
-//     }
-
 void Locations::ourFloor()
 {
     Game& game = Game::getInstance();
