@@ -270,9 +270,11 @@ void Locations::ourFloor()
             // game.closeSDL();
 
             // Option 2: Display an outcome screen and close after a delay
+            game.stopMusic();
+            game.startMusic("SedOutro.mp3");
             game.loadImage("OutcomeScreen.png"); // Load your outcome screen image
             game.render();
-            SDL_Delay(3000); // Wait for 3 seconds
+            SDL_Delay(10000); // Wait for 3 seconds
             game.closeSDL();
             break;
         }        
