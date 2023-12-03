@@ -18,4 +18,3 @@ private:
     MusicManager();
     Mix_Music* currentMusic;
 };
-
