@@ -31,12 +31,14 @@ bool SecondFloor :: northDirection(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
                     option = "yes";
+                    SDL_Delay(100);
                     break; // Exit loop if 'YES' clicked
                 } 
                 // Check if coordinates are within the 'NO' button bounds
                 else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
                     option = "no";
+                    SDL_Delay(100);
                     break; // Exit loop if 'NO' clicked
                 }
             }
@@ -76,13 +78,16 @@ bool SecondFloor :: leadersPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
+            
         }
     }
         if (option == "yes")
@@ -115,13 +120,16 @@ bool SecondFloor :: marketingPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
+            
         }
     }
         if (option == "yes")
@@ -155,13 +163,16 @@ bool SecondFloor :: collabPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
+            
         }
     }
 
@@ -205,7 +216,7 @@ void SecondFloor :: questionOrder(){
             else{
                 bool market = marketingPlace(game);
                 if(market){
-                     game.displayOutcome("Screens/Markcomm.png");
+                    game.displayOutcome("Screens/Markcomm.png");
                     std::cout<<"It seems like it's Marcomm/IT Dept";
                 }
                 else{

@@ -17,9 +17,11 @@ bool Students::genderM(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -45,9 +47,11 @@ bool Students::birthdayMonth(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -73,9 +77,11 @@ bool Students::outstation(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -101,9 +107,11 @@ bool Students::initialM(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -129,9 +137,11 @@ bool Students::school(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -157,9 +167,11 @@ bool Students::majorCS(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -185,9 +197,11 @@ bool Students::majorEE(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -213,9 +227,11 @@ bool Students::bdayStar(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -241,9 +257,11 @@ bool Students::calculusRepeat(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
