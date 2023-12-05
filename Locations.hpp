@@ -21,7 +21,7 @@ public:
     bool reception = false;
     // Declares boolean variables with initial values set to false. These likely represent game states or conditions.
 
-
+    
     bool Ground(Game& game);
     // Declares a member function named 'Ground' that takes a reference to a Game object and returns a boolean
 
@@ -42,4 +42,7 @@ public:
 
     void updateFloor();
     // Declares a member function named 'updateFloor' that does not return a value
+
+    virtual void questionOrder(){};
+    // vPure virtual function
 };

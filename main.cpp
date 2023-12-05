@@ -65,28 +65,38 @@ int main(int argc, char* argv[])
         // Branch based on the selected floor
         if (loc.floor == "First Floor")
         {
-            FirstFloor FL;
-            FL.questionOrder();
+            Locations* FF = new FirstFloor();
+            FF->questionOrder();
+            delete FF;
+            FF = nullptr;
         }
         else if(loc.floor == "Lower Ground Floor")
         {
-            LowerGroundFloor LGF;
-            LGF.questionOrder();
+            Locations* LGF = new LowerGroundFloor();
+            LGF->questionOrder();
+            delete LGF;
+            LGF = nullptr;
         }
         else if(loc.floor == "Ground Floor")
         {    
-            GroundFloor GF;
-            GF.questionOrder();
+            Locations* GF = new GroundFloor();
+            GF->questionOrder();
+            delete GF;
+            GF = nullptr;
         } 
         else if(loc.floor == "Fourth Floor")
         {
-            FourthFloor FL;
-            FL.questionOrder();
+            Locations* FL = new FourthFloor();
+            FL->questionOrder();
+            delete FL;
+            FL = nullptr;
         }
         else if(loc.floor == "Second Floor")
         {
-            SecondFloor SF;
-            SF.questionOrder();
+            Locations* SF = new SecondFloor();
+            SF->questionOrder();
+            delete SF;
+            SF = nullptr;
         }
     }
     // else
