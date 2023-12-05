@@ -36,6 +36,7 @@ bool GroundFloor::westDirection(Game& game)
                 {
                     // Set the option to 'yes'
                     option = "yes";
+                    SDL_Delay(100);
                     // Break out of the loop as the event is handled
                     break;
                 } 
@@ -44,6 +45,7 @@ bool GroundFloor::westDirection(Game& game)
                 {
                     // Set the option to 'no'
                     option = "no";
+                    SDL_Delay(100);
                     // Break out of the loop as the event is handled
                     break;
                 }
@@ -83,10 +85,12 @@ bool GroundFloor::northDirection(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -123,10 +127,12 @@ bool GroundFloor::centralDirection(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -163,10 +169,12 @@ bool GroundFloor::courtyard(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -203,10 +211,12 @@ bool GroundFloor::classroom(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -242,10 +252,12 @@ bool GroundFloor::multiStory(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -282,10 +294,12 @@ bool GroundFloor::famousPerson(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -322,10 +336,12 @@ bool GroundFloor::airCourt(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -362,10 +378,12 @@ bool GroundFloor::waterCourt(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -402,10 +420,12 @@ bool GroundFloor::fireCourt(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -442,10 +462,12 @@ bool GroundFloor::earthCourt(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -482,10 +504,12 @@ bool GroundFloor::comfortZone(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -521,10 +545,12 @@ bool GroundFloor::hygenicFood(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -561,10 +587,12 @@ bool GroundFloor::lectureHall(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -601,10 +629,12 @@ bool GroundFloor::multipleOffices(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -641,10 +671,12 @@ bool GroundFloor::eventsKarao(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -681,10 +713,12 @@ bool GroundFloor::wellness(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -721,10 +755,12 @@ bool GroundFloor::careerOffice(Game& game){
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
