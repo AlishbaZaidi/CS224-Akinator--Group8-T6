@@ -15,20 +15,17 @@ bool FourthFloor::blueTheme(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
     }
 
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 // Function to inquire if the location is a good option for hangout
@@ -46,19 +43,15 @@ bool FourthFloor::hangOut(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
-    }
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
     }
 }
 
@@ -77,18 +70,15 @@ bool FourthFloor::openArea(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
-    }
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
     }
 }
 
@@ -107,20 +97,15 @@ bool FourthFloor::cafe(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
-    }
-
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
     }
 }
 

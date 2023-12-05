@@ -21,19 +21,15 @@ bool FirstFloor::eastDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
-    }
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
     }
 }
 
@@ -54,9 +50,11 @@ bool FirstFloor::northDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -64,11 +62,11 @@ bool FirstFloor::northDirection(Game& game)
     }
 
 
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
+    // if (option == "yes") {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 }
 
 // Function to inquire if the location is a smoking area
@@ -88,9 +86,11 @@ bool FirstFloor::smokingArea(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -98,11 +98,7 @@ bool FirstFloor::smokingArea(Game& game)
     }
 
 
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
+    
 }
 
 // Function to inquire if the location has a capacity of 350 or more
@@ -122,20 +118,15 @@ bool FirstFloor::capacity(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
-    }
-
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
     }
 }
 
@@ -156,21 +147,17 @@ bool FirstFloor::lectureHall(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
     }
 
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 // Function to inquire if the location is found on multiple floors
@@ -190,21 +177,17 @@ bool FirstFloor::multiStory(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
     }
 
-
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 // Function to inquire if the location is reserved for faculty only
@@ -224,20 +207,17 @@ bool FirstFloor::onlyFaculty(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    SDL_Delay(100);
                     return false;
                 }
             }
         }
     }
 
-    if (option == "yes") {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 // Function to determine the order of questions and display outcomes
