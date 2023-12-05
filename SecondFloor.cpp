@@ -31,12 +31,14 @@ bool SecondFloor :: northDirection(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
                     option = "yes";
+                    SDL_Delay(100);
                     break; // Exit loop if 'YES' clicked
                 } 
                 // Check if coordinates are within the 'NO' button bounds
                 else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
                     option = "no";
+                    SDL_Delay(100);
                     break; // Exit loop if 'NO' clicked
                 }
             }
@@ -76,10 +78,12 @@ bool SecondFloor :: leadersPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -115,10 +119,12 @@ bool SecondFloor :: marketingPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -155,10 +161,12 @@ bool SecondFloor :: collabPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
+                    SDL_Delay(100);
                     break;
                 }
             }
