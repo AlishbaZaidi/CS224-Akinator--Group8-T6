@@ -15,9 +15,13 @@ bool FourthFloor::blueTheme(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -46,9 +50,13 @@ bool FourthFloor::hangOut(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -77,9 +85,13 @@ bool FourthFloor::openArea(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -107,9 +119,13 @@ bool FourthFloor::cafe(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
