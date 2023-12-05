@@ -6,7 +6,7 @@
 bool LowerGroundFloor::eastDirection(Game& game) 
 {
     // Load an image named 'QEast.png' and render it using the game instance
-    game.loadImage("QEast.png");
+    game.loadImage("Screens/QEast.png");
     game.render();
 
     SDL_Event e;
@@ -31,14 +31,12 @@ bool LowerGroundFloor::eastDirection(Game& game)
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
                     option = "yes";
-                    SDL_Delay(100);
                     break; // Exit the loop if 'YES' is clicked
                 } 
                 // Check if coordinates are within the 'NO' button bounds
                 else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
                     option = "no";
-                    SDL_Delay(100);
                     break; // Exit the loop if 'NO' is clicked
                 }
             }
@@ -63,7 +61,7 @@ bool LowerGroundFloor::centralDirection(Game& game)
     {
         // std::cout << "Is the location you are thinking a central location?" << "\n";
         // std::cin >> option;
-        game.loadImage("QCentral.png");
+        game.loadImage("Screens/QCentral.png");
         game.render();
 
         SDL_Event e;
@@ -81,12 +79,10 @@ bool LowerGroundFloor::centralDirection(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -106,7 +102,7 @@ bool LowerGroundFloor::maleRestricted(Game& game)
 {
         // std::cout << "Is the location you are thinking restricted for males?" << "\n";
         // std::cin >> option;
-        game.loadImage("QRestricted.png");
+        game.loadImage("Screens/QRestricted.png");
         game.render();
 
         SDL_Event e;
@@ -124,12 +120,10 @@ bool LowerGroundFloor::maleRestricted(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -149,7 +143,7 @@ bool LowerGroundFloor::cockroach(Game& game)
 {
         // std::cout << "Are cockroaches and lizards found at your desired location?" << "\n";
         // std::cin >> option;
-        game.loadImage("QCockroaches.png");
+        game.loadImage("Screens/QCockroaches.png");
         game.render();
 
         SDL_Event e;
@@ -167,12 +161,10 @@ bool LowerGroundFloor::cockroach(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -192,7 +184,7 @@ bool LowerGroundFloor::groupStudy(Game& game)
 {
         // std::cout << "Is that place an isolated learning spot?" << "\n";
         // std::cin >> option;
-        game.loadImage("QIsolated.png");
+        game.loadImage("Screens/QIsolated.png");
         game.render();
 
         SDL_Event e;
@@ -210,12 +202,10 @@ bool LowerGroundFloor::groupStudy(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -235,7 +225,7 @@ bool LowerGroundFloor::famousName(Game& game)
 {
         // std::cout << "Is the location you're thinking of named after a famous personality?" << "\n";
         // std::cin >> option;
-        game.loadImage("QFamousPerson.png");
+        game.loadImage("Screens/QFamousPerson.png");
         game.render();
 
         SDL_Event e;
@@ -253,12 +243,10 @@ bool LowerGroundFloor::famousName(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -278,7 +266,7 @@ bool LowerGroundFloor::openArea(Game& game)
 {
         // std::cout << "Is the location you're of at open area?" << "\n";
         // std::cin >> option;
-        game.loadImage("QOpenArea.png");
+        game.loadImage("Screens/QOpenArea.png");
         game.render();
 
         SDL_Event e;
@@ -296,12 +284,10 @@ bool LowerGroundFloor::openArea(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -321,7 +307,7 @@ bool LowerGroundFloor::events(Game& game)
 {
         // std::cout << "Do events take place at your desired location?" << "\n";
         // std::cin >> option;
-        game.loadImage("QEvents.png");
+        game.loadImage("Screens/QEvents.png");
         game.render();
 
         SDL_Event e;
@@ -339,12 +325,10 @@ bool LowerGroundFloor::events(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -364,7 +348,7 @@ bool LowerGroundFloor::stage(Game& game)
 {
         // std::cout << "Can a stage be found on your location?" << "\n";
         // std::cin >> option;
-        game.loadImage("QStage.png");
+        game.loadImage("Screens/QStage.png");
         game.render();
 
         SDL_Event e;
@@ -382,12 +366,10 @@ bool LowerGroundFloor::stage(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -416,23 +398,23 @@ void LowerGroundFloor::questionOrder()
     if(east){
         bool music = famousName(game);
         if(music){
-            game.displayOutcome("Music.png");
+            game.displayOutcome("Screens/Music.png");
             std::cout<<"WOO_HOO!!! Your desired location is Music Room";
         }
         else{
             bool cockroaches = cockroach(game);
             if(cockroaches){
-                game.displayOutcome("Tapal.png");
+                game.displayOutcome("Screens/Tapal.png");
                 std::cout<<"WOO-HOO!! You're thinking of Tapal Cafeteria";
             }
             else{
                 bool dhaba = openArea(game);
                 if(dhaba){
-                    game.displayOutcome("Dhaba.png");
+                    game.displayOutcome("Screens/Dhaba.png");
                     std::cout<<"Dhaba souch rahey hou na hehe";
                 }
                 else{
-                    game.displayOutcome("Dukaan.png");
+                    game.displayOutcome("Screens/Dukaan.png");
                     std::cout<<"Easy hougaya bhai! Aap tou Dukaan ki baat kar rahey!";
                 }
             }
@@ -445,33 +427,33 @@ void LowerGroundFloor::questionOrder()
             if(eventPlace){
                 bool stages = stage(game);
                 if(stages){
-                    game.displayOutcome("Amphi.png");
+                    game.displayOutcome("Screens/Amphi.png");
                     std::cout<<"WOO-HOO!! You're thinking of Amphitheatre";
                 }
                 else{
-                    game.displayOutcome("Courts.png");
+                    game.displayOutcome("Screens/Courts.png");
                     std::cout<<"WOO-HOO!! You're thinking of Courts";
                 }
             }
             else{
-                game.displayOutcome("Gym.png");
+                game.displayOutcome("Screens/Gym.png");
                 std::cout<<"WOO-HOO! It's Gym";
             }
         }
         else{
             bool fLounge = maleRestricted(game);
             if(fLounge){
-                game.displayOutcome("FemaleLounge.png");
+                game.displayOutcome("Screens/FemaleLounge.png");
                 std::cout<<"WOO-HOO! Khawateen Lounge";
             }
             else{
                 bool study = groupStudy(game);
                 if(study){
-                    game.displayOutcome("Learn.png");
+                    game.displayOutcome("Screens/Learn.png");
                     std::cout<<"WOO-HOO!! You're thinking of Learn Courtyard";
                 }
                 else{
-                    game.displayOutcome("ParkingArea.png");
+                    game.displayOutcome("Screens/ParkingArea.png");
                     std::cout<<"WOO-HOO!! You're thinking of the Parking areas";
                 }
             }

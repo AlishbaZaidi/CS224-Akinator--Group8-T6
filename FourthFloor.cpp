@@ -2,7 +2,7 @@
 
 // Function to inquire if the theme of the location is blue
 bool FourthFloor::blueTheme(Game& game) {
-    game.loadImage("Qtidal.png");  // Load the question image
+    game.loadImage("Screens/Qtidal.png");  // Load the question image
     game.render();
 
     SDL_Event e;
@@ -15,13 +15,9 @@ bool FourthFloor::blueTheme(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -37,7 +33,7 @@ bool FourthFloor::blueTheme(Game& game) {
 
 // Function to inquire if the location is a good option for hangout
 bool FourthFloor::hangOut(Game& game) {
-    game.loadImage("Qtrunk.png");  // Load the question image
+    game.loadImage("Screens/Qtrunk.png");  // Load the question image
     game.render();
 
     SDL_Event e;
@@ -50,13 +46,9 @@ bool FourthFloor::hangOut(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -72,7 +64,7 @@ bool FourthFloor::hangOut(Game& game) {
 
 // Function to inquire if the location is in an open area
 bool FourthFloor::openArea(Game& game) {
-    game.loadImage("Qskydhaba.png");  // Load the question image
+    game.loadImage("Screens/Qskydhaba.png");  // Load the question image
     game.render();
 
     SDL_Event e;
@@ -85,13 +77,9 @@ bool FourthFloor::openArea(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -106,7 +94,7 @@ bool FourthFloor::openArea(Game& game) {
 
 // Function to inquire if the location is a cafe with healthy drinks
 bool FourthFloor::cafe(Game& game) {
-    game.loadImage("Qgrito.png");  // Load the question image
+    game.loadImage("Screens/Qgrito.png");  // Load the question image
     game.render();
 
     SDL_Event e;
@@ -119,13 +107,9 @@ bool FourthFloor::cafe(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -145,31 +129,31 @@ void FourthFloor::questionOrder() {
     Game& game = Game::getInstance();
     bool blue = blueTheme(game);
     if (blue) {
-        game.displayOutcome("TidalPool.png"); // Display outcome for Tidal Pool
+        game.displayOutcome("Screens/TidalPool.png"); // Display outcome for Tidal Pool
         std::cout << "You're thinking of Tidal Pool";
     } else {
         bool drinks = cafe(game);
         if (drinks) {
-            game.displayOutcome("Grito.png"); // Display outcome for Grito
+            game.displayOutcome("Screens/Grito.png"); // Display outcome for Grito
             std::cout << "You are thinking of Grito";
         } else {
             int num1 = NewRandomNumGenerator(2);
             if (num1) {
                 bool open = openArea(game);
                 if (open) {
-                    game.displayOutcome("SkyDhaba.png"); // Display outcome for SkyDhaba
+                    game.displayOutcome("Screens/SkyDhaba.png"); // Display outcome for SkyDhaba
                     std::cout << "You are thinking of Sky Dhaba";
                 } else {
-                    game.displayOutcome("Trunk.png"); // Display outcome for Trunk
+                    game.displayOutcome("Screens/Trunk.png"); // Display outcome for Trunk
                     std::cout << "You are thinking of Trunk";
                 }
             } else {
                 bool hang = hangOut(game);
                 if (hang) {
-                    game.displayOutcome("Trunk.png"); // Display outcome for Trunk
+                    game.displayOutcome("Screens/Trunk.png"); // Display outcome for Trunk
                     std::cout << "You are thinking of Trunk";
                 } else {
-                    game.displayOutcome("SkyDhaba.png"); // Display outcome for SkyDhaba
+                    game.displayOutcome("Screens/SkyDhaba.png"); // Display outcome for SkyDhaba
                     std::cout << "You are thinking of Sky Dhaba";
                 }
             }

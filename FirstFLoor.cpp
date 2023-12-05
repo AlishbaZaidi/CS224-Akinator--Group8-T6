@@ -8,7 +8,7 @@
 bool FirstFloor::eastDirection(Game& game) 
 {
     // Display the question image for east direction
-    game.loadImage("QEast.png");
+    game.loadImage("Screens/QEast.png");
     game.render();
 
     SDL_Event e;
@@ -21,12 +21,9 @@ bool FirstFloor::eastDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
+                    // Check for NO coordinates
                     return false;
                 }
             }
@@ -44,7 +41,7 @@ bool FirstFloor::eastDirection(Game& game)
 bool FirstFloor::northDirection(Game& game) 
 {
     // Display the question image for north direction
-    game.loadImage("QNorth.png");
+    game.loadImage("Screens/QNorth.png");
     game.render();
 
     SDL_Event e;
@@ -57,12 +54,9 @@ bool FirstFloor::northDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
+                    // Check for NO coordinates
                     return false;
                 }
             }
@@ -81,7 +75,7 @@ bool FirstFloor::northDirection(Game& game)
 bool FirstFloor::smokingArea(Game& game)
 {
     // Display the question image for smoking area
-    game.loadImage("Qsmokingarea.png");
+    game.loadImage("Screens/Qsmokingarea.png");
     game.render();
 
     SDL_Event e;
@@ -91,14 +85,12 @@ bool FirstFloor::smokingArea(Game& game)
                 exit(0);
             } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
-                SDL_GetMouseState(&x, &y);// Check for YES coordinates
+                SDL_GetMouseState(&x, &y);
+                // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
+                    // Check for NO coordinates
                     return false;
                 }
             }
@@ -117,7 +109,7 @@ bool FirstFloor::smokingArea(Game& game)
 bool FirstFloor::capacity(Game& game)
 {
     // Display the question image for capacity
-    game.loadImage("Qcapacity.png");
+    game.loadImage("Screens/Qcapacity.png");
     game.render();
 
     SDL_Event e;
@@ -130,12 +122,9 @@ bool FirstFloor::capacity(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
+                    // Check for NO coordinates
                     return false;
                 }
             }
@@ -154,7 +143,7 @@ bool FirstFloor::capacity(Game& game)
 bool FirstFloor::lectureHall(Game& game)
 {
     // Display the question image for lecture hall
-    game.loadImage("QLectureHall.png");
+    game.loadImage("Screens/QLectureHall.png");
     game.render();
 
     SDL_Event e;
@@ -167,13 +156,9 @@ bool FirstFloor::lectureHall(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -192,7 +177,7 @@ bool FirstFloor::lectureHall(Game& game)
 bool FirstFloor::multiStory(Game& game)
 {
     // Display the question image for multiple floors
-    game.loadImage("Qmultiple.png");
+    game.loadImage("Screens/Qmultiple.png");
     game.render();
 
     SDL_Event e;
@@ -205,13 +190,9 @@ bool FirstFloor::multiStory(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -230,7 +211,7 @@ bool FirstFloor::multiStory(Game& game)
 bool FirstFloor::onlyFaculty(Game& game)
 {
     // Display the question image for faculty-only location
-    game.loadImage("QonlyFaculty.png");
+    game.loadImage("Screens/QonlyFaculty.png");
     game.render();
 
     SDL_Event e;
@@ -243,13 +224,9 @@ bool FirstFloor::onlyFaculty(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
-                    option = "yes";
-                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
-                    option = "no";
-                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -285,13 +262,13 @@ void FirstFloor::questionOrder()
                 if (cap)
                 {
                     // Display outcome for Auditorium
-                    game.displayOutcome("Audi.png");
+                    game.displayOutcome("Screens/Audi.png");
                     std::cout << "WOHOOOO! Your location is Auditorium";
                 }
                 else
                 {
                     // Display outcome for Tariq Rafi
-                    game.displayOutcome("TR.png");
+                    game.displayOutcome("Screens/TR.png");
                     std::cout << "WOHOOOO! Your location is Tariq Rafi";
                 }
             }
@@ -304,12 +281,12 @@ void FirstFloor::questionOrder()
                     if (nasha)
                     {
                         // Display outcome for Mehfil
-                        game.displayOutcome("Mehfil.png");
+                        game.displayOutcome("Screens/Mehfil.png");
                         std::cout << "WOHOOOO! Your location is Mehfil";
                     }
                     else {
                         // Display outcome for Library
-                        game.displayOutcome("Lib.png");
+                        game.displayOutcome("Screens/Lib.png");
                         std::cout << "WOHOOOO! Your location is Library";
                     }
                 }
@@ -319,12 +296,12 @@ void FirstFloor::questionOrder()
                     if (parhaku)
                     {
                         // Display outcome for Library
-                        game.displayOutcome("Lib.png");
+                        game.displayOutcome("Screens/Lib.png");
                         std::cout << "WOHOOOO! Your location is Library";
                     }
                     else{
                         // Display outcome for Mehfil
-                        game.displayOutcome("Mehfil.png");
+                        game.displayOutcome("Screens/Mehfil.png");
                         std::cout << "WOHOOOO! Your location is Mehfil";
                     }
                 }
@@ -339,12 +316,12 @@ void FirstFloor::questionOrder()
                 if (nasha)
                 {
                     // Display outcome for Baithak
-                    game.displayOutcome("Baithak.png");
+                    game.displayOutcome("Screens/Baithak.png");
                     std::cout << "WOHOOOO! Your location is Baithak";
                 }
                 else {
                     // Display outcome for Dean's Pod
-                    game.displayOutcome("DP.png");
+                    game.displayOutcome("Screens/DP.png");
                     std::cout << "WOHOOOO! Your location is Dean's Pod";
                 }
             }
@@ -354,12 +331,12 @@ void FirstFloor::questionOrder()
                 if (dir)
                 {
                     // Display outcome for Dean's Pod
-                    game.displayOutcome("DP.png");
+                    game.displayOutcome("Screens/DP.png");
                     std::cout << "WOHOOOO! Your location is Dean's Pod";
                 }
                 else{
                     // Display outcome for Baithak
-                    game.displayOutcome("Baithak.png");
+                    game.displayOutcome("Screens/Baithak.png");
                     std::cout << "WOHOOOO! Your location is Baithak";
                 }
             }
@@ -374,12 +351,12 @@ void FirstFloor::questionOrder()
             if (faculty)
             {
                 // Display outcome for Mehfil
-                game.displayOutcome("Mehfil.png");
+                game.displayOutcome("Screens/Mehfil.png");
                 std::cout << "WOHOOOO! Your location is Mehfil";
             }
             else{
                 // Display outcome for Baithak
-                game.displayOutcome("Baithak.png");
+                game.displayOutcome("Screens/Baithak.png");
                 std::cout << "WOHOOOO! Your location is Baithak";
             }
         }
@@ -392,13 +369,13 @@ void FirstFloor::questionOrder()
                 if (cap)
                 {
                     // Display outcome for Auditorium
-                    game.displayOutcome("Audi.png");
+                    game.displayOutcome("Screens/Audi.png");
                     std::cout << "WOHOOOO! Your location is Auditorium";
                 }
                 else
                 {
                     // Display outcome for Tariq Rafi
-                    game.displayOutcome("TR.png");
+                    game.displayOutcome("Screens/TR.png");
                     std::cout << "WOHOOOO! Your location is Tariq Rafi";
                 }
             }
@@ -411,12 +388,12 @@ void FirstFloor::questionOrder()
                     if (parhaku)
                     {
                         // Display outcome for Library
-                        game.displayOutcome("Lib.png");
+                        game.displayOutcome("Screens/Lib.png");
                         std::cout << "WOHOOOO! Your location is Library";
                     }
                     else{
                         // Display outcome for Dean's Pod
-                        game.displayOutcome("DP.png");
+                        game.displayOutcome("Screens/DP.png");
                         std::cout << "WOHOOOO! Your location is Dean's Pod";
                     }
                 }
@@ -426,13 +403,13 @@ void FirstFloor::questionOrder()
                     if (dir)
                     {
                         // Display outcome for Dean's Pod
-                        game.displayOutcome("DP.png");
+                        game.displayOutcome("Screens/DP.png");
                         std::cout << "WOHOOOO! Your location is Dean's Pod";
                     }
                     else
                     {
                         // Display outcome for Library
-                        game.displayOutcome("Lib.png");
+                        game.displayOutcome("Screens/Lib.png");
                         std::cout << "WOHOOOO! Your location is Library";
                     }
                 }

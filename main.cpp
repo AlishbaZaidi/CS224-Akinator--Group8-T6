@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
     game.run(); 
 
     // Load the image for the mode selection screen
-    game.loadImage("Choose.png");
+    game.loadImage("Screens/Choose.png");
     game.render();
 
     // SDL event handling

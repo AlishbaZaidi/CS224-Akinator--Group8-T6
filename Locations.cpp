@@ -10,7 +10,7 @@
 bool Locations::Ground(Game& game) 
 {
     // Load an image named 'QGround.png' and render it using the Game instance.
-    game.loadImage("QGround.png");
+    game.loadImage("Screens/QGround.png");
     game.render();
 
     SDL_Event e;
@@ -29,12 +29,12 @@ bool Locations::Ground(Game& game)
                 // Check if the coordinates are within the 'YES' button area.
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
                     option = "yes";
-                    SDL_Delay(100); // Wait for 100 milliseconds.
+                    SDL_Delay(500); // Wait for 500 milliseconds.
                     break; // Exit the loop.
                 // Check if the coordinates are within the 'NO' button area.
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     option = "no";
-                    SDL_Delay(100); // Wait for 100 milliseconds.
+                    SDL_Delay(500); // Wait for 500 milliseconds.
                     break; // Exit the loop.
                 }
             }
@@ -59,7 +59,7 @@ bool Locations::LowerGround(Game& game)
     {
         // std::cout << "Is there parking on this floor?" << "\n";
         // std::cin >> option;
-        game.loadImage("QLowerGround.png");
+        game.loadImage("Screens/QLowerGround.png");
         game.render();
 
         SDL_Event e;
@@ -72,11 +72,11 @@ bool Locations::LowerGround(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -96,7 +96,7 @@ bool Locations::LowerGround(Game& game)
 bool Locations::First(Game &game) {
         // std::cout << "Is the piano room on the same floor?" << "\n";
         // std::cin >> option;
-    game.loadImage("QFirst.png");
+    game.loadImage("Screens/QFirst.png");
     game.render();
 
     SDL_Event e;
@@ -109,11 +109,11 @@ bool Locations::First(Game &game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
+                    SDL_Delay(500);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
+                    SDL_Delay(500);
                     break;
                 }
             }
@@ -137,7 +137,7 @@ bool Locations::Second(Game& game)
     {
         // std::cout << "Does this floor have two divisions?" << "\n";
         // std::cin >> option;
-        game.loadImage("QSecond.png");
+        game.loadImage("Screens/QSecond.png");
         game.render();
 
         SDL_Event e;
@@ -150,11 +150,11 @@ bool Locations::Second(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -175,7 +175,7 @@ bool Locations::Fourth(Game& game)
     {
         // std::cout << "Is this floor newly made?" << "\n";
         // std::cin >> option;
-        game.loadImage("QFourth.png");
+        game.loadImage("Screens/QFourth.png");
         game.render();
 
         SDL_Event e;
@@ -188,11 +188,11 @@ bool Locations::Fourth(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(100);
+                        SDL_Delay(500);
                         break;
                     }
                 }
@@ -272,9 +272,9 @@ void Locations::ourFloor()
             // Option 2: Display an outcome screen and close after a delay
             game.stopMusic();
             game.startMusic("SedOutro.mp3");
-            game.loadImage("OutcomeScreen.png"); // Load your outcome screen image
+            game.loadImage("Screens/OutcomeScreen.png"); // Load your outcome screen image
             game.render();
-            SDL_Delay(7500); // Wait for 3 seconds
+            SDL_Delay(10000); // Wait for 3 seconds
             game.closeSDL();
             break;
         }        

@@ -4,7 +4,7 @@
 
 bool Students::genderM(Game& game) {
     // Display the image and handle user input for gender
-    game.loadImage("Qmale.png");
+    game.loadImage("Screens/Qmale.png");
     game.render();
 
     SDL_Event e;
@@ -17,11 +17,9 @@ bool Students::genderM(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -34,7 +32,7 @@ bool Students::genderM(Game& game) {
 
 bool Students::birthdayMonth(Game& game) {
     // Display the image and handle user input for birthday month
-    game.loadImage("Qbirthmonth.png");
+    game.loadImage("Screens/Qbirthmonth.png");
     game.render();
 
     SDL_Event e;
@@ -47,11 +45,9 @@ bool Students::birthdayMonth(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -64,7 +60,7 @@ bool Students::birthdayMonth(Game& game) {
 
 bool Students::outstation(Game& game) {
     // Display the image and handle user input for outstation status
-    game.loadImage("Qoutstation.png");
+    game.loadImage("Screens/Qoutstation.png");
     game.render();
 
     SDL_Event e;
@@ -77,11 +73,9 @@ bool Students::outstation(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -94,7 +88,7 @@ bool Students::outstation(Game& game) {
 
 bool Students::initialM(Game& game) {
     // Display the image and handle user input for the initial 'M'
-    game.loadImage("QMinitial.png");
+    game.loadImage("Screens/QMinitial.png");
     game.render();
 
     SDL_Event e;
@@ -107,11 +101,9 @@ bool Students::initialM(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -124,7 +116,7 @@ bool Students::initialM(Game& game) {
 
 bool Students::school(Game& game) {
     // Display the image and handle user input for school affiliation
-    game.loadImage("QAhss.png");
+    game.loadImage("Screens/QAhss.png");
     game.render();
 
     SDL_Event e;
@@ -137,11 +129,9 @@ bool Students::school(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -154,7 +144,7 @@ bool Students::school(Game& game) {
 
 bool Students::majorCS(Game& game) {
     // Display the image and handle user input for majoring in Computer Science
-    game.loadImage("QCE.png");
+    game.loadImage("Screens/QCE.png");
     game.render();
 
     SDL_Event e;
@@ -167,11 +157,9 @@ bool Students::majorCS(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -184,7 +172,7 @@ bool Students::majorCS(Game& game) {
 
 bool Students::majorEE(Game& game) {
     // Display the image and handle user input for majoring in Electrical Engineering
-    game.loadImage("QEE.png");
+    game.loadImage("Screens/QEE.png");
     game.render();
 
     SDL_Event e;
@@ -197,11 +185,9 @@ bool Students::majorEE(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -214,7 +200,7 @@ bool Students::majorEE(Game& game) {
 
 bool Students::bdayStar(Game& game) {
     // Display the image and handle user input for being born under the star sign Aquarius
-    game.loadImage("QAqua.png");
+    game.loadImage("Screens/QAqua.png");
     game.render();
 
     SDL_Event e;
@@ -227,11 +213,9 @@ bool Students::bdayStar(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -244,7 +228,7 @@ bool Students::bdayStar(Game& game) {
 
 bool Students::calculusRepeat(Game& game) {
     // Display the image and handle user input for repeating calculus
-    game.loadImage("QCalcrepeat.png");
+    game.loadImage("Screens/QCalcrepeat.png");
     game.render();
 
     SDL_Event e;
@@ -257,11 +241,9 @@ bool Students::calculusRepeat(Game& game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -285,44 +267,44 @@ void Students::questionOrder() {
             if (cs) {
                 bool calc = calculusRepeat(game);
                 if (calc) {
-                    game.displayOutcome("Ashar.png");
-                    std::cout << "Leutinent Ashar Abbasi Pakistan Navy";
+                    game.displayOutcome("Screens/Ashar.png");
+                    std::cout << "Leutinent Ashar Abbasi - Pakistan Navy";
                 } else {
-                    game.displayOutcome("Bilal.png");
+                    game.displayOutcome("Screens/Bilal.png");
                     std::cout << "Bilal Ahmed Soomro - Wadero of Khairpur";
                 }
             } else {
-                game.displayOutcome("Mubashir.png");
+                game.displayOutcome("Screens/Mubashir.png");
                 std::cout << "Mubashir Anees Soomro - Shikarpur waro";
             }
         } else {
             bool nov = birthdayMonth(game);
             if (nov) {
-                game.displayOutcome("Shaaf.png");
+                game.displayOutcome("Screens/Shaaf.png");
                 std::cout << "Shaaf Farooq - The only King at Habib";
             } else {
-                game.displayOutcome("Huzaifa.png");
-                std::cout << "Huzaifa Ahmed Khan - Real Chad";
+                game.displayOutcome("Screens/Huzaifa.png");
+                std::cout << "Huzaifa Ahmed Khan - CE ki Jaan";
             }
         }
     } else {
         bool ahss = school(game);
         if (ahss) {
-            game.displayOutcome("Saba.png");
-            std::cout << "Saba Nisar Soomro - Queen of Larkana";
+            game.displayOutcome("Screens/Saba.png");
+            std::cout << "Saba Nisar Soomro - Waderi of Larkana";
         } else {
             bool ee = majorEE(game);
             if (ee) {
-                game.displayOutcome("Mysha.png");
+                game.displayOutcome("Screens/Mysha.png");
                 std::cout << "Mysha Zulfiqar - Female Andrew Tate";
             } else {
                 bool star = bdayStar(game);
                 if (star) {
-                    game.displayOutcome("Sajal.png");
-                    std::cout << "Sajal Fatima - The Model of Habib";
+                    game.displayOutcome("Screens/Sajal.png");
+                    std::cout << "Sajal Fatima - The Model";
                 } else {
-                    game.displayOutcome("Alishba.png");
-                    std::cout << "The one & only Syeda Alishba Zaidi";
+                    game.displayOutcome("Screens/Alishba.png");
+                    std::cout << "Syeda Alishba Zaidi - The Queen";
                 }
             }
         }

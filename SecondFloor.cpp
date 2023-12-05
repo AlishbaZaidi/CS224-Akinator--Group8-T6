@@ -6,7 +6,7 @@
 // Define the northDirection function for the SecondFloor class
 bool SecondFloor :: northDirection(Game& game){
     // Load and render an image for the north direction question
-    game.loadImage("QNorth.png");
+    game.loadImage("Screens/QNorth.png");
     game.render();
 
     SDL_Event e;
@@ -31,14 +31,12 @@ bool SecondFloor :: northDirection(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
                     option = "yes";
-                    SDL_Delay(100);
                     break; // Exit loop if 'YES' clicked
                 } 
                 // Check if coordinates are within the 'NO' button bounds
                 else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
                     option = "no";
-                    SDL_Delay(100);
                     break; // Exit loop if 'NO' clicked
                 }
             }
@@ -60,7 +58,7 @@ bool SecondFloor :: northDirection(Game& game){
 bool SecondFloor :: leadersPlace(Game& game){
     //std::cout << "Is this area primarily used for high-level executive decision-making?" << "\n";
     //std::cin >> option;
-    game.loadImage("QPresident.png");
+    game.loadImage("Screens/QPresident.png");
     game.render();
 
     SDL_Event e;
@@ -78,12 +76,10 @@ bool SecondFloor :: leadersPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -102,7 +98,7 @@ bool SecondFloor :: leadersPlace(Game& game){
 bool SecondFloor :: marketingPlace(Game& game){
     //std::cout << "Is this area dedicated to marketing, communication, and information technology operations?" << "\n";
     //std::cin >> option;
-    game.loadImage("QMarkcomm.png");
+    game.loadImage("Screens/QMarkcomm.png");
     game.render();
     SDL_Event e;
     while (true) 
@@ -119,12 +115,10 @@ bool SecondFloor :: marketingPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -144,7 +138,7 @@ bool SecondFloor :: collabPlace(Game& game){
     //std::cout << "Is this area designed for creative collaboration and innovative thinking?" << "\n";
     //std::cin >> option;
 
-    game.loadImage("Qplay.png");
+    game.loadImage("Screens/Qplay.png");
     game.render();
     SDL_Event e;
     while (true) 
@@ -161,12 +155,10 @@ bool SecondFloor :: collabPlace(Game& game){
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 { // YES coordinates
                     option = "yes";
-                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 { // NO coordinates
                     option = "no";
-                    SDL_Delay(100);
                     break;
                 }
             }
@@ -194,7 +186,7 @@ void SecondFloor :: questionOrder(){
     if(north){
         bool pod = leadersPlace(game);
         if(pod){
-            game.displayOutcome("President.png");
+            game.displayOutcome("Screens/President.png");
             std::cout<<"President Pod it is!";
         }
         else{
@@ -202,29 +194,29 @@ void SecondFloor :: questionOrder(){
             if(num1 == 1){
                 bool collab = collabPlace(game);
                 if(collab){
-                    game.displayOutcome("Playground.png");
+                    game.displayOutcome("Screens/Playground.png");
                     std::cout<<"WOHOOOO!!! It's Playground";
                 } 
                 else{
-                    game.displayOutcome("Markcomm.png");
+                    game.displayOutcome("Screens/Markcomm.png");
                     std::cout<<"It seems like it's Marcomm/IT Dept";
                 }
             }
             else{
                 bool market = marketingPlace(game);
                 if(market){
-                     game.displayOutcome("Markcomm.png");
+                     game.displayOutcome("Screens/Markcomm.png");
                     std::cout<<"It seems like it's Marcomm/IT Dept";
                 }
                 else{
-                    game.displayOutcome("Playground.png");
+                    game.displayOutcome("Screens/Playground.png");
                     std::cout<<"WOHOOOO!!! It's Playground";
                 }
             }
         }
     }
     else{
-        game.displayOutcome("SFCL.png");
+        game.displayOutcome("Screens/SFCL.png");
         std::cout<<"WOOHOOOOO!!! You are thinking of SFCL";
     }
 };

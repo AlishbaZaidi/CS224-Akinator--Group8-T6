@@ -99,7 +99,7 @@ void Game::render() {
 // Function to render the initial screen of the game
 void Game::renderInitialScreen()
 {
-    loadImage("Start.png"); // Load the start screen image
+    loadImage("Screens/Start.png"); // Load the start screen image
     render(); // Render the start screen
 }
 
@@ -165,7 +165,7 @@ bool Game::promptMusicChoice() {
     // Create a renderer for the choice window
     SDL_Renderer* choiceRenderer = SDL_CreateRenderer(choiceWindow, -1, SDL_RENDERER_ACCELERATED);
     // Load the popup image
-    SDL_Surface* loadedSurface = IMG_Load("Popup.png");
+    SDL_Surface* loadedSurface = IMG_Load("Screens/Popup.png");
     // Create a texture from the loaded surface
     SDL_Texture* popupTexture = SDL_CreateTextureFromSurface(choiceRenderer, loadedSurface);
     // Free the loaded surface
