@@ -31,12 +31,14 @@ bool LowerGroundFloor::eastDirection(Game& game)
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                 {
                     option = "yes";
+                    SDL_Delay(100);
                     break; // Exit the loop if 'YES' is clicked
                 } 
                 // Check if coordinates are within the 'NO' button bounds
                 else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                 {
                     option = "no";
+                    SDL_Delay(100);
                     break; // Exit the loop if 'NO' is clicked
                 }
             }
@@ -79,10 +81,12 @@ bool LowerGroundFloor::centralDirection(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -120,10 +124,12 @@ bool LowerGroundFloor::maleRestricted(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -161,10 +167,12 @@ bool LowerGroundFloor::cockroach(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -202,10 +210,12 @@ bool LowerGroundFloor::groupStudy(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -243,10 +253,12 @@ bool LowerGroundFloor::famousName(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -284,10 +296,12 @@ bool LowerGroundFloor::openArea(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -325,10 +339,12 @@ bool LowerGroundFloor::events(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -366,10 +382,12 @@ bool LowerGroundFloor::stage(Game& game)
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) 
                     { // YES coordinates
                         option = "yes";
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) 
                     { // NO coordinates
                         option = "no";
+                        SDL_Delay(100);
                         break;
                     }
                 }
