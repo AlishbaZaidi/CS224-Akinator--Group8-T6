@@ -29,12 +29,12 @@ bool Locations::Ground(Game& game)
                 // Check if the coordinates are within the 'YES' button area.
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
                     option = "yes";
-                    SDL_Delay(500); // Wait for 500 milliseconds.
+                    SDL_Delay(100); // Wait for 100 milliseconds.
                     break; // Exit the loop.
                 // Check if the coordinates are within the 'NO' button area.
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     option = "no";
-                    SDL_Delay(500); // Wait for 500 milliseconds.
+                    SDL_Delay(100); // Wait for 100 milliseconds.
                     break; // Exit the loop.
                 }
             }
@@ -72,11 +72,11 @@ bool Locations::LowerGround(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -109,11 +109,11 @@ bool Locations::First(Game &game) {
                 SDL_GetMouseState(&x, &y);
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                     option = "yes";
-                    SDL_Delay(500);
+                    SDL_Delay(100);
                     break;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                     option = "no";
-                    SDL_Delay(500);
+                    SDL_Delay(100);
                     break;
                 }
             }
@@ -150,11 +150,11 @@ bool Locations::Second(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -188,11 +188,11 @@ bool Locations::Fourth(Game& game)
                     SDL_GetMouseState(&x, &y);
                     if (x >= 135 && x <= 323 && y >= 470 && y <= 529) { // YES coordinates
                         option = "yes";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) { // NO coordinates
                         option = "no";
-                        SDL_Delay(500);
+                        SDL_Delay(100);
                         break;
                     }
                 }
@@ -274,7 +274,7 @@ void Locations::ourFloor()
             game.startMusic("SedOutro.mp3");
             game.loadImage("OutcomeScreen.png"); // Load your outcome screen image
             game.render();
-            SDL_Delay(10000); // Wait for 3 seconds
+            SDL_Delay(7500); // Wait for 3 seconds
             game.closeSDL();
             break;
         }        
