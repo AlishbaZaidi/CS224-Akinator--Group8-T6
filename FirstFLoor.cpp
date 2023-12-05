@@ -21,9 +21,12 @@ bool FirstFloor::eastDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
-                    // Check for NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -54,9 +57,12 @@ bool FirstFloor::northDirection(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
-                    // Check for NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -85,12 +91,14 @@ bool FirstFloor::smokingArea(Game& game)
                 exit(0);
             } else if (e.type == SDL_MOUSEBUTTONDOWN) {
                 int x, y;
-                SDL_GetMouseState(&x, &y);
-                // Check for YES coordinates
+                SDL_GetMouseState(&x, &y);// Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
-                    // Check for NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -122,9 +130,12 @@ bool FirstFloor::capacity(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
-                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
-                    // Check for NO coordinates
+                } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {// Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -156,9 +167,13 @@ bool FirstFloor::lectureHall(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -190,9 +205,13 @@ bool FirstFloor::multiStory(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
@@ -224,9 +243,13 @@ bool FirstFloor::onlyFaculty(Game& game)
                 SDL_GetMouseState(&x, &y);
                 // Check for YES coordinates
                 if (x >= 135 && x <= 323 && y >= 470 && y <= 529) {
+                    option = "yes";
+                    SDL_Delay(100);
                     return true;
                 } else if (x >= 457 && x <= 646 && y >= 470 && y <= 529) {
                     // Check for NO coordinates
+                    option = "no";
+                    SDL_Delay(100);
                     return false;
                 }
             }
